@@ -2,11 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>net.java.dev.sommer</groupId>
-        <artifactId>foafssl-keygen</artifactId>
+        <groupId>org.apache.clerezza</groupId>
+        <artifactId>org.apache.clerezza.ssl.keygen</artifactId>
         <version>0.5</version>
     </parent>
-    <artifactId>keygenapp-base</artifactId>
+    <groupId>org.apache.clerezza</groupId>
+    <artifactId>org.apache.clerezza.ssl.keygen.base</artifactId>
     <packaging>bundle</packaging>
     <name>FOAF+SSL Keygen :: Base Component</name>
     <build>
