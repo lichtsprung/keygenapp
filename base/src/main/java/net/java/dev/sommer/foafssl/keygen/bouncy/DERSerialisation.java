@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  * @since Mar 12, 2010
  */
 public class DERSerialisation extends DefaultCertSerialisation {
-	final Logger log = Logger.getLogger(DERSerialisation.class.getName());
+	final static transient Logger log = Logger.getLogger(DERSerialisation.class.getName());
 
 	byte[] ser = null;
 
