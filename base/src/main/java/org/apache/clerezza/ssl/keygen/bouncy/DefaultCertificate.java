@@ -129,7 +129,7 @@ public class DefaultCertificate implements Certificate {
 
 	@Override
 	public void startEarlier(String hours) {
-		if (null == hours  || "".equals(hours)) return;
+		if (null == hours || "".equals(hours)) return;
 		try {
 			this.earlier += Double.valueOf(hours);
 		} catch (NumberFormatException e) {
@@ -139,7 +139,7 @@ public class DefaultCertificate implements Certificate {
 
 	@Override
 	public void addDurationInHours(String hours) {
-		if (null ==hours || "".equals(hours)) return;
+		if (null == hours || "".equals(hours)) return;
 		try {
 			this.numHours += Double.valueOf(hours);
 		} catch (NumberFormatException e) {

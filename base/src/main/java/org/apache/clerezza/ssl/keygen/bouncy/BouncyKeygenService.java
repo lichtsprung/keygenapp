@@ -92,7 +92,7 @@ public class BouncyKeygenService implements KeygenService {
 	static {
 		if (Security.getProvider(BouncyCastleProvider.PROVIDER_NAME) == null) {
 			Security.addProvider(new BouncyCastleProvider());
-		} else throw new Error("missing BouncyCastleProvider -- add jars to classpath");
+		} //else throw new Error("missing BouncyCastleProvider -- add jars to classpath");
 	}
 
 	/**

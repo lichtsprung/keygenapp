@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
    <modelVersion>4.0.0</modelVersion>
-   <parent>
+   <!--parent>
         <groupId>org.apache.clerezza</groupId>
         <artifactId>org.apache.clerezza.parent</artifactId>
         <version>0.2-incubating-SNAPSHOT</version>
-   </parent>
+   </parent-->
    <groupId>org.apache.clerezza</groupId>
-   <artifactId>org.apache.clerezza.ssl.keygen</artifactId>
+   <artifactId>ssl.keygen</artifactId>
    <packaging>pom</packaging>
-   <version>0.5</version>
+   <version>${keygenapp.version}</version>
    <name>FOAF+SSL Keygen Lib :: Creating WebIDs in one Click</name>
    <url>http://www.rcs.manchester.ac.uk/</url>
 
@@ -20,6 +20,11 @@
          <distribution>repo</distribution>
       </license>
    </licenses>
+
+   <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <keygenapp.version>0.5-SNAPSHOT</keygenapp.version>
+   </properties>
 
    <modules>
       <module>base</module>
@@ -39,7 +44,7 @@
    </build>
 
    <reporting>
-      <plugins>
+      <!--plugins>
          <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>findbugs-maven-plugin</artifactId>
@@ -55,7 +60,7 @@
             <artifactId>maven-checkstyle-plugin</artifactId>
             <version>2.3</version>
          </plugin>
-      </plugins>
+      </plugins-->
    </reporting>
 
    <dependencyManagement>
@@ -73,7 +78,7 @@
          <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk16</artifactId>
-            <version>1.45</version>
+            <version>1.46</version>
          </dependency>
          <dependency>
             <groupId>commons-logging</groupId>
@@ -115,7 +120,4 @@
          <timezone>0</timezone>
       </developer>
    </developers>
-   <properties>
-      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-   </properties>
 </project>
