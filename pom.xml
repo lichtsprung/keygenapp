@@ -9,7 +9,7 @@
    <groupId>org.apache.clerezza</groupId>
    <artifactId>ssl.keygen</artifactId>
    <packaging>pom</packaging>
-   <version>${keygenapp.version}</version>
+   <version>0.5-SNAPSHOT</version>
    <name>FOAF+SSL Keygen Lib :: Creating WebIDs in one Click</name>
    <url>http://www.rcs.manchester.ac.uk/</url>
 
@@ -23,7 +23,6 @@
 
    <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <keygenapp.version>0.5-SNAPSHOT</keygenapp.version>
    </properties>
 
    <modules>
