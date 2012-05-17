@@ -2,14 +2,24 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.apache.clerezza</groupId>
+        <groupId>webid.info</groupId>
         <artifactId>ssl.keygen</artifactId>
-        <version>0.5-SNAPSHOT</version>
+        <version>0.5</version>
     </parent>
-    <groupId>org.apache.clerezza</groupId>
+    <groupId>webid.info</groupId>
     <artifactId>ssl.keygen.base</artifactId>
     <packaging>bundle</packaging>
     <name>FOAF+SSL Keygen :: Base Component</name>
+
+    <distributionManagement>
+        <downloadUrl>http://bblfish.net/work/repo/releases/</downloadUrl>
+        <repository>
+            <id>bblfish.net</id>
+            <name>bblfish.net Website</name>
+            <url>scpexe://bblfish.net/home/hjs/htdocs/work/repo/releases</url>
+        </repository>
+    </distributionManagement>
+
     <build>
         <!--filters>
             <filter>src/main/resources/library.properties</filter>
@@ -53,6 +63,14 @@
                 </configuration>
             </plugin>
         </plugins>
+        <extensions>
+            <!-- Enabling the use of scp -->
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh-external</artifactId>
+                <version>2.2</version>
+            </extension>
+        </extensions>
     </build>
 
     <dependencies>

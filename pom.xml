@@ -6,12 +6,21 @@
         <artifactId>org.apache.clerezza.parent</artifactId>
         <version>0.2-incubating-SNAPSHOT</version>
    </parent-->
-   <groupId>org.apache.clerezza</groupId>
+   <groupId>webid.info</groupId>
    <artifactId>ssl.keygen</artifactId>
    <packaging>pom</packaging>
-   <version>0.5-SNAPSHOT</version>
+   <version>0.5</version>
    <name>FOAF+SSL Keygen Lib :: Creating WebIDs in one Click</name>
-   <url>http://www.rcs.manchester.ac.uk/</url>
+   <url>https://github.com/bblfish/keygenapp</url>
+
+    <distributionManagement>
+        <downloadUrl>http://bblfish.net/work/repo/</downloadUrl>
+        <site>
+            <id>bblfish.net</id>
+            <name>bblfish.net Website</name>
+            <url>scp://bblfish.net/home/hjs/htdocs/work/repo/</url>
+        </site>
+    </distributionManagement>
 
    <licenses>
       <license>
@@ -40,6 +49,14 @@
             </configuration>
          </plugin>
       </plugins>
+      <extensions>
+           <!-- Enabling the use of scp -->
+           <extension>
+               <groupId>org.apache.maven.wagon</groupId>
+               <artifactId>wagon-ssh-external</artifactId>
+               <version>2.2</version>
+           </extension>
+      </extensions>
    </build>
 
    <reporting>
