@@ -14,12 +14,12 @@
    <url>https://github.com/bblfish/keygenapp</url>
 
     <distributionManagement>
-        <downloadUrl>http://bblfish.net/work/repo/</downloadUrl>
-        <site>
+        <downloadUrl>http://bblfish.net/work/repo/releases/</downloadUrl>
+        <repository>
             <id>bblfish.net</id>
             <name>bblfish.net Website</name>
-            <url>scp://bblfish.net/home/hjs/htdocs/work/repo/</url>
-        </site>
+            <url>scpexe://bblfish.net/home/hjs/htdocs/work/repo/releases</url>
+        </repository>
     </distributionManagement>
 
    <licenses>
@@ -36,7 +36,7 @@
 
    <modules>
       <module>base</module>
-      <module>samplewebapp</module>
+      <!--module>samplewebapp</module-->
    </modules>
 
    <build>
